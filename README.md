@@ -39,7 +39,6 @@ Get all the tasks on a TODO list                                                
 Remove a particular task from a TODO list                                          | `???`
 Complete a particular task on a TODO list                                          | `???`
 Parse the command-line arguments and take the appropriate action                   | `???`
-Parse the `todo.csv` file and wrap each entry in easier-to-manipulate Ruby objects | `???`
 
 
 There are other responsibilities.  What are they?
