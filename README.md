@@ -47,7 +47,6 @@ groceryList.remove(1);
 // the above remove should remove the 'cheese' task
 groceryList.list();
 //> bread
-//> cheese
 //> milk
 
 ```
