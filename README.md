@@ -29,7 +29,7 @@ There will be no text file in this version of this challenge. The todo list item
 
 Start by enumerating the responsibilities of your TODO application.  These aren't just the user-facing commands like "add", "remove", etc.  
 
-Each responsibility should map to a concrete unit of JavaScript code.  For example,
+Each responsibility should map to a concrete unit of JavaScript functions.  For example,
 
 Responsibility                                                                     | Code World
 -----------------------------------------------------------------------------------|------------------------------------
@@ -38,8 +38,6 @@ Add a task to a TODO list                                                       
 Get all the tasks on a TODO list                                                   | `tasks = list.tasks();`
 Remove a particular task from a TODO list                                          | `???`
 Complete a particular task on a TODO list                                          | `???`
-Parse the command-line arguments and take the appropriate action                   | `???`
-Parse the `todo.csv` file and wrap each entry in easier-to-manipulate Ruby objects | `???`
 
 
 There are other responsibilities.  What are they?
