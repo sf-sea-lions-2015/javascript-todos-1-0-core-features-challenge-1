@@ -1,32 +1,3 @@
-// // 4 ways to invoke a function in JS
-
-// var x = function(){
-//   console.log('hi');
-// }
-
-// function x(a,b,c){
-//   console.log('hi');
-// }
-
-// x()
-
-// // ---
-
-// abc.x()
-
-// // ---
-
-// x.call(overrideThis, 1,2,3 )
-// x.apply(overrideThis, [1,2,3])
-
-// // ---
-
-// new x
-
-// // abc = {}
-// // x.call(abc)
-
-
 var createTodoList = function(title) {
   var todoList = {};
 
@@ -44,10 +15,13 @@ var createTodoList = function(title) {
       // console.log(task);
   };
 
-  todoList.remove = function(task){
-    // find that task
-    // remove it from the tasks array
+  todoList.remove = function(index){
+    delete this.tasks[index];
   };
+
+  todoList.get = function(){
+
+  }
 
   return todoList;
 };
@@ -58,16 +32,39 @@ var createTodoList = function(title) {
 // Driver code
 
 
-var groceryList = createTodoList();
-groceryList.add('milk');
-groceryList.add('cheese');
-groceryList.add('butter');
-groceryList.add('bread');
-groceryList.list();
+var groceryList1 = createTodoList();
+groceryList1.add('bread');
+groceryList1.add('cheese');
+groceryList1.add('milk');
+groceryList1.list(); //-> ['bread', 'cheese', 'milk']
+// debugger
 
-var favoriteColors = createTodoList();
+groceryList1.tasks.indexOf('cheese'); //-> 1
+groceryList1.remove(1);
+groceryList1.list(); //-> ['bread', 'milk']
 
+// release 2
+var groceryList2 = createTodoList();
+groceryList2.add('bread');
+groceryList2.add('cheese');
+groceryList2.add('milk');
+groceryList2.add('yogurt');
+groceryList2.list(); //-> [
+// {description: 'bread', completed: false},
+// {description: 'cheese', completed: false},
+// {description: 'milk', completed: false},
+// ];
+groceryList2.tasks.indexOf('cheese'); //-> 1
+groceryList2.get(1); //-> {description: 'cheese', completed: false}
+groceryList2.complete(1);
+groceryList2.list(); //-> [
+// {description: 'bread', completed: false},
+// {description: 'cheese', completed: true},
+// {description: 'milk', completed: false},
+// ];
+groceryList2.remove(1);
+groceryList2.list(); //-> [
+// {description: 'bread', completed: false},
+// {description: 'milk', completed: false},
+// ];
 
-// var task1 = newTask()
-// task1.num = 1;
-// task1.title = "Get mom flowers";
