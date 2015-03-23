@@ -44,7 +44,7 @@ Parse the `todo.csv` file and wrap each entry in easier-to-manipulate Ruby objec
 
 There are other responsibilities.  What are they?
 
-###Release 1 : Translate to Code
+### Release 1 : Translate to Code
 
 Once you have a solid list of responsibilities you can start translating each into code.
 
@@ -101,3 +101,13 @@ Requirements:
 
 - A user can complete a specific task from their TODO list
 - A completed TODO task will be identified as such when a user uses the `list` command
+
+
+### Release 2 : Render your todo list in the DOM
+
+If you finish release 1 before lunch, do release 2, otherwise move onto the JavaScript racer
+
+- Using jQuery, render your todo list in the DOM
+- Add a form to add a new todo list item
+- Add buttons for add, complete and remove for each task
+
