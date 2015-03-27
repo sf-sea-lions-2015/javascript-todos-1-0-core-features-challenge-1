@@ -1,11 +1,29 @@
-var createTodoList = function() {
-  var todoList = {};
+var newTodoList = function() {
 
-  // your code here
+  var todoList = {}
 
+  todoList.tasks = []
+
+  todoList.add = function(task){
+    this.tasks.push(task)
+  }
+
+  todoList.remove = function(index){
+    delete this.tasks[index]
+  }
+
+  todoList.list = function(){
+    for(var i in this.tasks){
+      console.log(this.tasks[i])
+    }
+  }
+
+  todoList.complete = function(index){
+    this.tasks[index] += 'COMPLETE'
+  }
   return todoList;
+  // ???
 };
-
 
 
 
@@ -14,37 +32,38 @@ var createTodoList = function() {
 // Driver code
 
 
-// Release 1
+var groceryList1 = newTodoList();
+groceryList1.add('bread');
+groceryList1.add('cheese');
+groceryList1.add('milk');
+// groceryList1.list(); //-> ['bread', 'cheese', 'milk']
+// debugger
 
-var groceryList = createTodoList();
-groceryList.add('bread');
-groceryList.add('cheese');
-groceryList.add('milk');
-groceryList.list(); //-> ['bread', 'cheese', 'milk']
-groceryList.indexOf('cheese'); //-> 1
-groceryList.remove(1);
-groceryList.list(); //-> ['bread', 'milk']
+groceryList1.tasks.indexOf('cheese'); //-> 1
+groceryList1.remove(1);
+// groceryList1.list(); //-> ['bread', 'milk']
 
 // release 2
-var groceryList = createTodoList();
-groceryList.add('bread');
-groceryList.add('cheese');
-groceryList.add('milk');
-groceryList.list(); //-> [
-// {description: 'bread', completed: false}, 
-// {description: 'cheese', completed: false}, 
-// {description: 'milk', completed: false}, 
+var groceryList2 = newTodoList();
+groceryList2.add('bread');
+groceryList2.add('cheese');
+groceryList2.add('milk');
+groceryList2.add('yogurt');
+// groceryList2.list(); //-> [
+// {description: 'bread', completed: false},
+// {description: 'cheese', completed: false},
+// {description: 'milk', completed: false},
 // ];
-groceryList.indexOf('cheese'); //-> 1
-groceryList.get(1); //-> {description: 'cheese', completed: false}
-groceryList.complete(1);
-groceryList.list(); //-> [
-// {description: 'bread', completed: false}, 
-// {description: 'cheese', completed: true}, 
-// {description: 'milk', completed: false}, 
+groceryList2.tasks.indexOf('cheese'); //-> 1
+// groceryList2.get(1); //-> {description: 'cheese', completed: false}
+groceryList2.complete(1);
+groceryList2.list(); //-> [
+// {description: 'bread', completed: false},
+// {description: 'cheese', completed: true},
+// {description: 'milk', completed: false},
 // ];
-groceryList.remove(1);
-groceryList.list(); //-> [
-// {description: 'bread', completed: false}, 
-// {description: 'milk', completed: false}, 
+groceryList2.remove(1);
+groceryList2.list(); //-> [
+// {description: 'bread', completed: false},
+// {description: 'milk', completed: false},
 // ];
