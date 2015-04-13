@@ -1,3 +1,48 @@
+//RELEASE 1
+// var createTodoList = function() {
+//   var todoList = {
+//      tasks:[],
+//      add: function(item){
+//       this.tasks.push(item)
+//      },
+//      list: function(){
+//        console.log(this.tasks);
+//      },
+//      indexOf: function(item){
+//         return this.tasks.indexOf(item);
+//      },
+//      remove: function(index){
+//          this.tasks.splice(index);
+//      },
+//      get: function(index){
+//     // access the date of the array
+//     // display the properties from their desired index
+//       this.tasks[index].description
+//      }
+//   };
+//   // your code here
+//   return todoList;
+//   // return groceryList;
+// };
+
+
+// ****************   Driver code   **********************
+// Release 1
+
+// var groceryList = createTodoList();
+// groceryList.add('bread');
+// groceryList.add('cheese');
+// groceryList.add('milk');
+// groceryList.list(); //-> ['bread', 'cheese', 'milk']
+// groceryList.indexOf('cheese'); //-> 1
+// groceryList.remove(1);
+// groceryList.list(); //-> ['bread', 'milk']
+
+
+
+
+//****************  RELEASE 2  *********************
+
 var createTodoList = function() {
   var todoList = {
      tasks:[],
@@ -14,43 +59,19 @@ var createTodoList = function() {
          this.tasks.splice(index);
      },
      get: function(index){
-
     // access the date of the array
     // display the properties from their desired index
       this.tasks[index].description
-
-
      }
   };
-
-
-
   // your code here
-
   return todoList;
   // return groceryList;
 };
 
 
+// ****************  release 2 DRIVER CODE ****************
 
-
-
-
-// Driver code
-
-
-// Release 1
-
-var groceryList = createTodoList();
-groceryList.add('bread');
-groceryList.add('cheese');
-groceryList.add('milk');
-groceryList.list(); //-> ['bread', 'cheese', 'milk']
-groceryList.indexOf('cheese'); //-> 1
-groceryList.remove(1);
-groceryList.list(); //-> ['bread', 'milk']
-
-// release 2
 var groceryList = createTodoList();
 groceryList.add('bread');
 groceryList.add('cheese');
