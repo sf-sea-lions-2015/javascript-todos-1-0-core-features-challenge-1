@@ -59,9 +59,10 @@ var createTodoList = function() {
          this.tasks.splice(index);
      },
      get: function(index){
-    // access the date of the array
-    // display the properties from their desired index
-      this.tasks[index].description
+      console.log(this.tasks[index]);
+     },
+     complete: function(index){
+       this.tasks[index].completed = true;
      }
   };
   // your code here
