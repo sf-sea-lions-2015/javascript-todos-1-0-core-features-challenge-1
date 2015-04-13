@@ -13,11 +13,6 @@
 //      },
 //      remove: function(index){
 //          this.tasks.splice(index);
-//      },
-//      get: function(index){
-//     // access the date of the array
-//     // display the properties from their desired index
-//       this.tasks[index].description
 //      }
 //   };
 //   // your code here
