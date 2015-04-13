@@ -3,8 +3,15 @@ var createTodoList = function() {
 
   todoList.tasks = [];
 
-  todoList.add = function(task){
-    this.tasks.push(task);
+  var task = function(item) {
+    return {
+      description: item,
+      completed: false,
+    };
+  };
+
+  todoList.add = function(item){
+    this.tasks.push(task(item));
   };
 
   todoList.remove = function(index){
@@ -17,11 +24,20 @@ var createTodoList = function() {
     };
   };
 
-  todoList.indexOf = function(task){
+  todoList.indexOf = function(item){
     for(var i in this.tasks){
-      if (this.tasks[i] == task) console.log(i)
+      if (this.tasks[i].description == item) console.log(i)
     };
   };
+
+  todoList.get = function(index) {
+    console.log(this.tasks[index])
+  };
+
+  todoList.complete = function(index) {
+    this.tasks[index].completed = true
+  };
+
   return todoList;
 };
 
