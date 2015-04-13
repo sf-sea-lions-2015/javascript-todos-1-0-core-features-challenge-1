@@ -22,7 +22,7 @@
 //   };
 //   // your code here
 //   return todoList;
-//   // return groceryList;
+
 // };
 
 
@@ -67,7 +67,6 @@ var createTodoList = function() {
   };
   // your code here
   return todoList;
-  // return groceryList;
 };
 
 
