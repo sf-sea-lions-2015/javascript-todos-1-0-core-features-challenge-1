@@ -14,6 +14,16 @@ This challenge is based on the ruby todos challenge in phase 1
 This challenge is designed to introduce you to JavaScript the language before we introduce features of the web browser.
 
 
+## How you should work
+
+0. Open the HTML file in this repo in chrome
+0. Open the chrome developer tools
+0. Go to the sources tab and open the console
+0. Write code in the js file in this repo
+0. Reload the page to run your code
+0. rinse and repeat.
+
+
 ### Release 1
 
 Impliment the following API:

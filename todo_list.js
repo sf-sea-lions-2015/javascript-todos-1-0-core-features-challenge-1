@@ -20,6 +20,7 @@ var groceryList = createTodoList();
 groceryList.add('bread');
 groceryList.add('cheese');
 groceryList.add('milk');
+groceryList.tasks; //-> ['bread', 'cheese', 'milk']
 groceryList.list(); //-> ['bread', 'cheese', 'milk']
 groceryList.indexOf('cheese'); //-> 1
 groceryList.remove(1);
@@ -30,6 +31,11 @@ var groceryList = createTodoList();
 groceryList.add('bread');
 groceryList.add('cheese');
 groceryList.add('milk');
+groceryList.tasks; //-> [
+// {description: 'bread', completed: false},
+// {description: 'cheese', completed: false},
+// {description: 'milk', completed: false},
+// ];
 groceryList.list(); //-> [
 // {description: 'bread', completed: false}, 
 // {description: 'cheese', completed: false}, 
