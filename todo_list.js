@@ -5,15 +5,30 @@ var createTodoList = function() {
     items: [],
 
     add: function(foodItem) {
-      this.items.push(foodItem);
+      this.items.push({ description:foodItem, completed: false });
     },
 
     list: function() {
-      console.log(this.items);
+      for ( var i = 0; i < this.items.length; i += 1 ){
+        console.log(this.items[i]);
+      }
     },
 
     indexOf: function(foodItem) {
-      console.log(this.items.indexOf(foodItem))
+      // console.log(this.items.indexOf(foodItem))
+      for ( var i = 0; i < this.items.length; i += 1 ) {
+        if(this.items[i].description === foodItem) {
+          console.log(i);
+        }
+      }
+    },
+
+    get: function(foodIndex) {
+      console.log(this.items[foodIndex])
+    },
+
+    complete: function(foodIndex) {
+      this.items[foodIndex].completed = true;
     },
 
     remove: function(foodIndex) {
@@ -35,14 +50,14 @@ var createTodoList = function() {
 
 // Release 1
 
-var groceryList = createTodoList();
-groceryList.add('bread');
-groceryList.add('cheese');
-groceryList.add('milk');
-groceryList.list(); //-> ['bread', 'cheese', 'milk']
-groceryList.indexOf('cheese'); //-> 1
-groceryList.remove(1);
-groceryList.list(); //-> ['bread', 'milk']
+// var groceryList = createTodoList();
+// groceryList.add('bread');
+// groceryList.add('cheese');
+// groceryList.add('milk');
+// groceryList.list(); //-> ['bread', 'cheese', 'milk']
+// groceryList.indexOf('cheese'); //-> 1
+// groceryList.remove(1);
+// groceryList.list(); //-> ['bread', 'milk']
 
 // release 2
 var groceryList = createTodoList();
