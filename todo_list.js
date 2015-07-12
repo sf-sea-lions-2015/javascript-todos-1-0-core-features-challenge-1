@@ -1,7 +1,26 @@
 var createTodoList = function() {
-  var todoList = {};
 
-  // your code here
+  var todoList = {
+
+    items: [],
+
+    add: function(foodItem) {
+      this.items.push(foodItem);
+    },
+
+    list: function() {
+      console.log(this.items);
+    },
+
+    indexOf: function(foodItem) {
+      console.log(this.items.indexOf(foodItem))
+    },
+
+    remove: function(foodIndex) {
+      this.items.splice(foodIndex, 1)
+    }
+
+  }
 
   return todoList;
 };
@@ -31,20 +50,20 @@ groceryList.add('bread');
 groceryList.add('cheese');
 groceryList.add('milk');
 groceryList.list(); //-> [
-// {description: 'bread', completed: false}, 
-// {description: 'cheese', completed: false}, 
-// {description: 'milk', completed: false}, 
+// {description: 'bread', completed: false},
+// {description: 'cheese', completed: false},
+// {description: 'milk', completed: false},
 // ];
 groceryList.indexOf('cheese'); //-> 1
 groceryList.get(1); //-> {description: 'cheese', completed: false}
 groceryList.complete(1);
 groceryList.list(); //-> [
-// {description: 'bread', completed: false}, 
-// {description: 'cheese', completed: true}, 
-// {description: 'milk', completed: false}, 
+// {description: 'bread', completed: false},
+// {description: 'cheese', completed: true},
+// {description: 'milk', completed: false},
 // ];
 groceryList.remove(1);
 groceryList.list(); //-> [
-// {description: 'bread', completed: false}, 
-// {description: 'milk', completed: false}, 
+// {description: 'bread', completed: false},
+// {description: 'milk', completed: false},
 // ];
